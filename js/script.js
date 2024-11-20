@@ -8,3 +8,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// JavaScript for Navigation Buttons
+
+// Navigation Button Click Events
+document.querySelectorAll('.nav-container span').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const page = button.getAttribute('data-page');
+        window.location.href = page;
+    });
+});
+
