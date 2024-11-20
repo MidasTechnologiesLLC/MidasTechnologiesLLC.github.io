@@ -8,7 +8,14 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// JavaScript for Navigation Buttons
+
+// Menu Item Click Events
+document.querySelectorAll('.menu-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        const page = item.getAttribute('data-page');
+        window.location.href = page;
+    });
+});
 
 // Navigation Button Click Events
 document.querySelectorAll('.nav-container span').forEach(function(button) {
