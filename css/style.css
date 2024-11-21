@@ -49,11 +49,21 @@ body {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
+/* Header Container */
+.header-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* Header Section */
 .header-section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -65,14 +75,16 @@ body {
     height: auto;
 }
 
-/* ASCII Header */
+/* ASCII Header with Multicolor Gradient */
 .ascii-header pre {
     margin: 0;
     font-size: 14px;
-    background: linear-gradient(135deg, #800080, #ff00ff); /* Purple gradient */
+    background: linear-gradient(135deg, #ff4081, #ff8c00, #ffd700, #00fa9a, #1e90ff, #ff4081); /* Multicolor gradient */
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     animation: gradient-animation 6s ease infinite;
+    background-size: 200% 200%;
     white-space: pre-wrap;
 }
 
@@ -90,8 +102,7 @@ body {
 
 /* Navigation Container */
 .nav-container {
-    text-align: center;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .nav-container pre {
@@ -189,3 +200,4 @@ a {
         font-size: 14px;
     }
 }
+
