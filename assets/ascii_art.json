@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Dragon",
+        "content": "Your ASCII art of a dragon here..."
+    },
+    {
+        "id": 2,
+        "name": "Phoenix",
+        "content": "Your ASCII art of a phoenix here..."
+    },
+    {
+        "id": 3,
+        "name": "Tree",
+        "content": "Your ASCII art of a tree here..."
+    },
+    {
+        "id": 4,
+        "name": "Mountain",
+        "content": "Your ASCII art of a mountain here..."
+    }
+]
+
