@@ -201,3 +201,34 @@ a {
     }
 }
 
+/* Content Container */
+.content-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center; /* Center the content */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.content-container:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.section-title {
+    color: #800080; /* Purple color */
+}
+
+.founder-name {
+    color: #1e90ff; /* A different color for variety */
+    font-weight: bold;
+}
+
+/* Adjust pre styles within content containers */
+.content-container pre {
+    font-size: 16px;
+    color: #f0f0f0;
+}

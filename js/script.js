@@ -76,6 +76,14 @@ document.querySelectorAll('.menu-item').forEach(function(item) {
     });
 });
 
+// Make Header Clickable
+const headerContainer = document.querySelector('.header-container');
+if (headerContainer) {
+    headerContainer.style.cursor = 'pointer';
+    headerContainer.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
 
 // Navigation Button Click Events
 document.querySelectorAll('.nav-container span').forEach(function(button) {
