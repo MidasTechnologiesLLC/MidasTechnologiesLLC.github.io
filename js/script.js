@@ -9,13 +9,20 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Menu Item Click Events
+// Menu Item Click and Keypress Events
 document.querySelectorAll('.menu-item').forEach(function(item) {
     item.addEventListener('click', function() {
         const page = item.getAttribute('data-page');
         window.location.href = page;
     });
+    item.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            const page = item.getAttribute('data-page');
+            window.location.href = page;
+        }
+    });
 });
+
 
 // Navigation Button Click Events
 document.querySelectorAll('.nav-container span').forEach(function(button) {

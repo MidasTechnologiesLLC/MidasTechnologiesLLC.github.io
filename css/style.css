@@ -18,49 +18,58 @@ body {
 /* ASCII Art Backgrounds */
 .ascii-art-left, .ascii-art-right {
     position: fixed;
-    opacity: 0.15;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    opacity: 0.1;
     font-size: 12px;
     white-space: pre-wrap;
     pointer-events: none;
     z-index: 1;
+    overflow: hidden;
 }
 
 .ascii-art-left {
     left: 0;
-    top: 0;
-    transform: scale(0.4);
+    text-align: left;
 }
 
 .ascii-art-right {
     right: 0;
-    top: 0;
-    transform: scale(0.6);
+    text-align: right;
 }
 
 /* Main Content */
 .main-content {
     position: relative;
-    z-index: 10;
+    z-index: 2;
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    margin-right: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
 }
 
 /* ASCII Header */
-.ascii-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.ascii-header .logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
 .ascii-header pre {
-    font-size: 16px;
-    background: linear-gradient(135deg, #ff4081, #ff8c00, #ffd700, #00fa9a, #1e90ff, #ff4081);
+    margin: 0;
+    font-size: 14px;
+    background: linear-gradient(135deg, #800080, #ff00ff); /* Purple gradient */
     -webkit-background-clip: text;
     color: transparent;
     animation: gradient-animation 6s ease infinite;
@@ -90,21 +99,22 @@ body {
     color: #f0f0f0;
 }
 
-.nav-container a {
-    color: #1e90ff;
+/* Menu Items */
+.menu-item {
+    color: #800080; /* Purple color */
+    cursor: pointer;
     text-decoration: none;
-    margin: 0 10px;
 }
 
-.nav-container a:hover {
-    color: #ff4081;
+.menu-item:hover {
+    color: #ff00ff; /* Lighter purple on hover */
 }
 
 /* Separator Line */
 .ascii-line {
     border: none;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 64, 129, 0), rgba(255, 64, 129, 0.75), rgba(255, 64, 129, 0));
+    background-image: linear-gradient(to right, rgba(128, 0, 128, 0), rgba(128, 0, 128, 0.75), rgba(128, 0, 128, 0));
     margin: 20px 0;
 }
 
@@ -119,6 +129,7 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 10px 0;
+    cursor: pointer;
 }
 
 .preview-container pre {
@@ -127,12 +138,8 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 15px;
     border-radius: 5px;
+    text-align: center; /* Center the content */
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.preview-container a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .preview-container:hover pre {
@@ -140,13 +147,23 @@ body {
     transform: scale(1.02);
 }
 
+/* Preview Titles */
+.preview-title {
+    color: #800080; /* Purple color */
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.85);
     color: #fff;
     margin-top: 20px;
+}
+
+/* Remove underlines and default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Responsive Design */
@@ -155,12 +172,20 @@ footer {
         display: none; /* Hide ASCII art on smaller screens */
     }
 
+    .header-section {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
     .ascii-header pre {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .nav-container pre, .preview-container pre {
         font-size: 14px;
     }
 }
-
