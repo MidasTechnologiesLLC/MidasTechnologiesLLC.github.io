@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Link to an additional CSS file specific to the progress page -->
     <link rel="stylesheet" href="css/progress.css">
+    <!-- Link to Chart.js library for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- ASCII Art Background Left -->
@@ -67,11 +69,36 @@
     |                      <span class="section-title">Our Progress</span>                        |
     +------------------------------------------------------------+
             </pre>
-            <!-- Animated Progress Bar -->
-            <div class="progress-bar-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progress-fill" data-percentage="75">
-                        <span class="progress-text" id="progress-text">75%</span>
+            <!-- Animated Progress Bars -->
+            <div class="progress-bars">
+                <div class="progress-item">
+                    <h4>Project Completion</h4>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="85">
+                                <span class="progress-text">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <h4>Funding Goal</h4>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="60">
+                                <span class="progress-text">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <h4>User Acquisition</h4>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="70">
+                                <span class="progress-text">70%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,30 +112,40 @@
     +------------------------------------------------------------+
             </pre>
             <div class="timeline">
+                <!-- Milestone items -->
+                <!-- You can add more milestones here -->
+                <!-- ... existing milestones ... -->
                 <div class="milestone">
                     <div class="milestone-content">
-                        <h3>Q1 2023</h3>
-                        <p>Company founded and initial team assembled.</p>
+                        <h3>Q1 2024</h3>
+                        <p>Launch of mobile application.</p>
                     </div>
                 </div>
                 <div class="milestone">
                     <div class="milestone-content">
-                        <h3>Q2 2023</h3>
-                        <p>Secured seed funding and launched first prototype.</p>
+                        <h3>Q2 2024</h3>
+                        <p>Expansion into international markets.</p>
                     </div>
                 </div>
                 <div class="milestone">
                     <div class="milestone-content">
-                        <h3>Q3 2023</h3>
-                        <p>Expanded team and moved into new headquarters.</p>
+                        <h3>Q3 2024</h3>
+                        <p>Introduction of AI-powered features.</p>
                     </div>
                 </div>
-                <div class="milestone">
-                    <div class="milestone-content">
-                        <h3>Q4 2023</h3>
-                        <p>Reached 10,000 users and received Series A funding.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Charts Section -->
+        <div class="content-container">
+            <pre>
+    +------------------------------------------------------------+
+    |                      <span class="section-title">Growth Metrics</span>                      |
+    +------------------------------------------------------------+
+            </pre>
+            <div class="charts-container">
+                <canvas id="usersChart"></canvas>
+                <canvas id="revenueChart"></canvas>
             </div>
         </div>
 
@@ -124,21 +161,15 @@
             </pre>
             <!-- Interactive Roadmap -->
             <div class="roadmap">
-                <div class="roadmap-item" data-content="We plan to launch our mobile app in Q1 2024.">
-                    <h4>Q1 2024</h4>
-                    <p>Mobile App Launch</p>
+                <!-- Roadmap items with tooltips -->
+                <!-- ... existing roadmap items ... -->
+                <div class="roadmap-item" data-content="New partnerships will be established in Q1 2025.">
+                    <h4>Q1 2025</h4>
+                    <p>Partnerships</p>
                 </div>
-                <div class="roadmap-item" data-content="Integration with major platforms is scheduled for Q2 2024.">
-                    <h4>Q2 2024</h4>
-                    <p>Platform Integration</p>
-                </div>
-                <div class="roadmap-item" data-content="We aim to expand globally in Q3 2024.">
-                    <h4>Q3 2024</h4>
-                    <p>Global Expansion</p>
-                </div>
-                <div class="roadmap-item" data-content="AI-powered features will be introduced in Q4 2024.">
-                    <h4>Q4 2024</h4>
-                    <p>AI Features</p>
+                <div class="roadmap-item" data-content="IPO planned for Q4 2025.">
+                    <h4>Q4 2025</h4>
+                    <p>IPO Launch</p>
                 </div>
             </div>
         </div>
@@ -158,4 +189,3 @@
     <script src="js/progress.js"></script>
 </body>
 </html>
-
