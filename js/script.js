@@ -76,20 +76,31 @@ document.querySelectorAll('.menu-item').forEach(function(item) {
     });
 });
 
-// Make Header Clickable
-const headerContainer = document.querySelector('.header-container');
-if (headerContainer) {
-    headerContainer.style.cursor = 'pointer';
-    headerContainer.addEventListener('click', function() {
+// Make Logo Clickable
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', function() {
         window.location.href = 'index.html';
+    });
+    logo.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            window.location.href = 'index.html';
+        }
     });
 }
 
-// Navigation Button Click Events
-document.querySelectorAll('.nav-container span').forEach(function(button) {
-    button.addEventListener('click', function() {
-        const page = button.getAttribute('data-page');
-        window.location.href = page;
+// Make ASCII Header Clickable
+const asciiHeader = document.querySelector('.ascii-header');
+if (asciiHeader) {
+    asciiHeader.style.cursor = 'pointer';
+    asciiHeader.setAttribute('tabindex', '0'); // Make focusable
+    asciiHeader.addEventListener('click', function() {
+        window.location.href = 'index.html';
     });
-});
-
+    asciiHeader.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            window.location.href = 'index.html';
+        }
+    });
+}
